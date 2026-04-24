@@ -40,7 +40,7 @@ public class RoomResource {
     // Register a new location
     @POST
     public Response setupNewRoom(Room room) {
-        // Assign a new unique identifierentifierentifier
+        // Assign a new unique identifier
         room.setId(DataStore.nextRoomId());
         DataStore.rooms.add(room);
         URI location = URI.create("/api/v1/rooms/" + room.getId());

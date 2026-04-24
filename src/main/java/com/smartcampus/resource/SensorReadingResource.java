@@ -16,7 +16,7 @@ public class SensorReadingResource {
 
     private final String sensorId;
 
-    // Context providentifierentifiered by parent resource
+    // Context provided by parent resource
     public SensorReadingResource(String sensorId) {
         this.sensorId = sensorId;
     }

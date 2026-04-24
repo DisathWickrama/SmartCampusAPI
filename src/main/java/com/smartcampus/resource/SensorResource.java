@@ -30,10 +30,10 @@ public class SensorResource {
                 .collect(Collectors.toList());
     }
 
-    // Add new device (validentifierentifierates location existence)
+    // Add new device (validates location existence)
     @POST
     public Response installNewSensor(Sensor sensor) {
-        // Validentifierentifierate that the specified location exists
+        // Validate that the specified location exists
         Room room = DataStore.rooms.stream()
                 .filter(r -> r.getId().equals(sensor.getRoomId()))
                 .findFirst()
@@ -53,7 +53,7 @@ public class SensorResource {
         return Response.created(location).entity(sensor).build();
     }
 
-    // Get individentifierentifierual device details
+    // Get individual device details
     @GET
     @Path("/{sensorId}")
     public Response fetchSensorDetails(@PathParam("sensorId") String sensorId) {

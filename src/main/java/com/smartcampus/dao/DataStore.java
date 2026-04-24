@@ -27,7 +27,7 @@ public class DataStore {
         rooms.add(room1);
         rooms.add(room2);
 
-        // Initialize default device devices
+        // Initialize default devices
         Sensor sensor1 = new Sensor("S" + sensorCounter.getAndIncrement(), "CO2", "ACTIVE", 450.0, room1.getId());
         Sensor sensor2 = new Sensor("S" + sensorCounter.getAndIncrement(), "OCCUPANCY", "ACTIVE", 85.0, room1.getId());
         Sensor sensor3 = new Sensor("S" + sensorCounter.getAndIncrement(), "LIGHTING", "MAINTENANCE", 0.0,

@@ -20,14 +20,14 @@ The platform features strict validation constraints (e.g., preventing the deleti
    \\\ash
    mvn clean package
    \\\
-3. A \.war\ file (e.g., \SmartCampusAPI-1.0-SNAPSHOT.war\) will be generated inside the \	arget/\ directory.
+3. A \.war\ file (e.g., \SmartCampusAPI.war\) will be generated inside the \	arget/\ directory.
 
 ### Deploying the Server
 1. Copy the generated \.war\ file from the \	arget/\ directory.
 2. Paste it into the \webapps/\ directory of your local Tomcat installation.
 3. Start the Tomcat server. (e.g., by running \in/startup.bat\ on Windows or \in/startup.sh\ on Unix/macOS).
 4. By default, the application will be hosted at:
-   \http://localhost:8080/SmartCampusAPI-1.0-SNAPSHOT/api/v1\
+   \http://localhost:8080/SmartCampusAPI/api/v1\
 
 ---
 
@@ -37,31 +37,31 @@ Here are five \curl\ commands demonstrating interactions with different parts of
 
 **1. Create a New Room (POST)**
 \\\ash
-curl -X POST http://localhost:8080/SmartCampusAPI-1.0-SNAPSHOT/api/v1/rooms \
+curl -X POST http://localhost:8080/SmartCampusAPI/api/v1/rooms \
 -H "Content-Type: application/json" \
 -d '{"name": "Main Lecture Hall", "capacity": 250}'
 \\\
 
 **2. Retrieve All Rooms (GET)**
 \\\ash
-curl -X GET http://localhost:8080/SmartCampusAPI-1.0-SNAPSHOT/api/v1/rooms
+curl -X GET http://localhost:8080/SmartCampusAPI/api/v1/rooms
 \\\
 
 **3. Register a New Sensor to a Room (POST)**
 \\\ash
-curl -X POST http://localhost:8080/SmartCampusAPI-1.0-SNAPSHOT/api/v1/sensors \
+curl -X POST http://localhost:8080/SmartCampusAPI/api/v1/sensors \
 -H "Content-Type: application/json" \
 -d '{"type": "CO2", "status": "ACTIVE", "roomId": "R1"}'
 \\\
 
 **4. Filter Sensors by Type (GET)**
 \\\ash
-curl -X GET "http://localhost:8080/SmartCampusAPI-1.0-SNAPSHOT/api/v1/sensors?type=CO2"
+curl -X GET "http://localhost:8080/SmartCampusAPI/api/v1/sensors?type=CO2"
 \\\
 
 **5. Append a New Sensor Reading (POST)**
 \\\ash
-curl -X POST http://localhost:8080/SmartCampusAPI-1.0-SNAPSHOT/api/v1/sensors/S1/readings \
+curl -X POST http://localhost:8080/SmartCampusAPI/api/v1/sensors/S1/readings \
 -H "Content-Type: application/json" \
 -d '{"value": 412.5}'
 \\\
